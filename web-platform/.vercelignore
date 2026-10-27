@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build output (Vercel sẽ build lại)
+dist/
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# Editor directories and files
+.idea
+.vscode
+*.swp
+*.swo
+.DS_Store
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Optional: exclude test coverage
+coverage/

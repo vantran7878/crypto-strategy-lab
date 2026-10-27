@@ -1,0 +1,22 @@
+# ============================================================
+# DO NOT COMMIT THESE FILES TO THE MAIN REPOSITORY
+# ============================================================
+#
+# Các file này chỉ dùng cho deployment và phải được giữ riêng.
+
+# Render configuration files — có thể commit nếu muốn track config, nhưng thường không nên:
+.render.yml
+
+# Environment variables for production:
+.env.prod
+.env.production
+
+# Local development env (đôi khi vẫn cần share với dev team):
+# .env.local   ← CÓ THỂ COMMIT NẾU ĐÃ XÓA GIÁ TRỊ NHẠY CẢM
+
+# Build artifacts — Vercel sẽ tự generate:
+dist/
+build/
+
+# Render dashboard logs:
+render-logs/*.log

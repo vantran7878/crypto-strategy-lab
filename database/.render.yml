@@ -1,0 +1,23 @@
+# ============================================================
+# Render.com deployment config — Database Services
+# ============================================================
+# Sau khi tạo service qua Dashboard, bạn có thể bỏ gitignore
+# file này nếu muốn track nó. Hoặc để trong .gitignore thì
+# dùng cho deploy thủ công qua CLI API của Render.
+
+services:
+  - type: web service
+    name: crypto-strategy-lab-db
+    env: postgresql
+    region: oregon
+    plan: starter
+    buildCommand: ""
+    startCommand: ""
+    
+  - type: web service
+    name: crypto-strategy-lab-redis
+    env: redis
+    region: oregon
+    plan: starter
+    buildCommand: ""
+    startCommand: ""

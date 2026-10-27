@@ -1,12 +1,38 @@
-# Crypto Strategy Lab
+# Crypto Strategy Lab — Full Stack Deployment Guide
 
-Nền tảng phân tích, kết hợp, backtest và xếp hạng chiến lược giao dịch BTC — đồ án **Kiến trúc phần mềm**.
-
-Kiến trúc: **modular monolith** (NestJS) + **worker tách tiến trình** (BullMQ/Redis) + **worker Python** (crawl news, chạy strategy do AI sinh) + React SPA.
+> 📦 **Status**: Backend API (Render.com) ✅ | Database (Render PostgreSQL) ✅ | Frontend (Vercel/GitHub Pages) ✅
+>
+> 🎯 Mục tiêu: Nền tảng phân tích, kết hợp, backtest và xếp hạng chiến lược giao dịch BTC — đồ án **Kiến trúc phần mềm**.
+>
+> Kiến trúc: **modular monolith** (NestJS) + **worker tách tiến trình** (BullMQ/Redis) + **worker Python** (crawl news, chạy strategy do AI sinh) + React SPA.
 
 ---
 
-## ⚡ Chạy nhanh
+## ☁️ Deploy lên Cloud (Production)
+
+> Sau khi setup xong, hệ thống chạy trên:
+>
+> - **Backend API** → [Render.com](https://dashboard.render.com) (`crypto-strategy-lab-api`)
+> - **Database** → Render PostgreSQL + Redis
+> - **Frontend** → Vercel (hoặc GitHub Pages)
+>
+> Chi phí tháng 1: ~$7–26/tháng (tùy free/pro tier)
+>
+> Hướng dẫn chi tiết cho từng component:
+>
+> | Component | Tài liệu |
+> |-----------|----------|
+> | Backend API lên Render.com | [`docs/deploy/backend.md`](./deploy/backend.md) |
+> | Database (PostgreSQL + Redis) | [`docs/deploy/database.md`](./deploy/database.md) |
+> | Frontend (Vercel/GitHub Pages) | [`docs/deploy/frontend.md`](./deploy/frontend.md) |
+> | Workers (subprocess hoặc Render service riêng) | [`docs/deploy/workers.md`](./deploy/workers.md) |
+
+---
+
+## 🏠 Chạy nhanh — Local Development Mode
+
+Sau khi setup xong, hệ thống cần **4 tiến trình chạy song song**: Postgres, Redis, API, worker
+(+ dev server frontend). Thiếu worker thì search sẽ nằm `PENDING` mãi không chạy.
 
 Sau khi setup xong, hệ thống cần **4 tiến trình chạy song song**: Postgres, Redis, API, worker
 (+ dev server frontend). Thiếu worker thì search sẽ nằm `PENDING` mãi không chạy.
