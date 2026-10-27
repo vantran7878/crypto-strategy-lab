@@ -25,6 +25,12 @@ test = [
     "pytest>=8.0",
 ]
 
+# Render deployment metadata — do not edit unless you know what you're doing.
+# See docs/deploy/render.md for the full deployment guide.
+[tool.render]
+environment-vars = {}
+build-context = "./config,./models"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 

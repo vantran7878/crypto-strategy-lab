@@ -5,3 +5,6 @@ models/finbert/
 
 # Python virtualenv
 .venv/
+
+# Render config (commit this manually if you want it tracked)
+.render.yml
